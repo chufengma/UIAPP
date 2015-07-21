@@ -7,6 +7,9 @@
     <string name="image">图片</string>
     <string name="record">录像</string>
     <string name="file">文件</string>
+    <string name="voice">多人语音</string>
+    <string name="position">位置</string>
+    <string name="video">视频</string>
 
     <!-- main activity -->
     <string name="title_activity_main">应急指挥</string>

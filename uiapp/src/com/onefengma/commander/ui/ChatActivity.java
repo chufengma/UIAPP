@@ -65,6 +65,17 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener,
 		}
 	};
 	
+	private DialogInterface.OnClickListener onCaptreVedioListener = new DialogInterface.OnClickListener() {
+		@Override
+		public void onClick(DialogInterface arg0, int pos) {
+			if (pos == 0) {
+				CaptureImageHelper.captureVideoFromCamera(ChatActivity.this);
+			} else if (pos == 1) {
+				CaptureImageHelper.captureVideoFromAublm(ChatActivity.this);
+			}
+		}
+	};
+	
 	public static void startFrom(Activity activity, Group group) {
 		Intent intent = new Intent(activity, ChatActivity.class);
 		intent.putExtra(EXTRA_GROUP, group);
@@ -135,6 +146,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener,
 			getCaptureImageDialog().show();
 			break;
 		case R.id.record:
+			getCaptureVedioDialog().show();
 			break;
 		case R.id.voice:
 			MultiVoiceActivity.startFrom(this, group);
@@ -144,8 +156,16 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener,
 		case R.id.position:
 			break;
 		case R.id.file:
+			CaptureImageHelper.captureFile(this);
 			break;
 		}
+	}
+	
+	private AlertDialog getCaptureVedioDialog() {
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setItems(new String[]{"录像", "选择视频"}, onCaptreVedioListener);
+		builder.setNegativeButton(R.string.dialog_item, null);
+		return builder.create();
 	}
 	
 	private AlertDialog getCaptureImageDialog() {
@@ -250,6 +270,10 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener,
 			// capture photo from camera
 		} else if (requestCode == RequesetCode.CAPTURE_FROM_ALBUM) {
 			// capture photo from album
+		} else if (requestCode == RequesetCode.VEDIO_FROM_CAMERA) {
+			// capture video from camera
+		} else if (requestCode == RequesetCode.VEDIO_FROM_ALBUM) {
+			// capture video from album
 		}
 	}
 
