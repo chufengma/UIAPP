@@ -59,14 +59,14 @@ public class ChatSettingActivity extends BaseActivity implements ChatMemberLayou
 
     @Override
     public void onAddMemberClick() {
-        CreateGroupActivity.startForAddMemberFrom(this);
+        SelectGroupMemberActivity.startForAddMemberFrom(this);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.set_group_name:
-                ChangeGroupNameActivity.startFrom(this, group);
+                SetGroupNameActivity.startForSetGroupName(this, group);
                 break;
         }
     }

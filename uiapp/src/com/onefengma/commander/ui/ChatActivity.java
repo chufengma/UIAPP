@@ -13,6 +13,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.onefengma.commander.MultiVoiceActivity;
 import com.onefengma.commander.R;
 import com.onefengma.commander.config.Constant.RequesetCode;
 import com.onefengma.commander.model.BaseChatMessage;
@@ -136,6 +137,7 @@ public class ChatActivity extends BaseActivity implements View.OnClickListener,
 		case R.id.record:
 			break;
 		case R.id.voice:
+			MultiVoiceActivity.startFrom(this, group);
 			break;
 		case R.id.vedio:
 			break;

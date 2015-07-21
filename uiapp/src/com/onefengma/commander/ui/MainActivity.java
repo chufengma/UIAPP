@@ -35,7 +35,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 GroupActivity.startFrom(this);
                 break;
             case R.id.create_group:
-                CreateGroupActivity.startFrom(this);
+            	SetGroupNameActivity.startForCreateGroup(this);
                 break;
             case R.id.system_message:
                 break;

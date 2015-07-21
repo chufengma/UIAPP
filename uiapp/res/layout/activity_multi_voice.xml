@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/multi_voice_bg"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.onefengma.commander.MultiVoiceActivity" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/panel" >
+        <com.onefengma.commander.ui.ChatMemberLayout
+            android:id="@+id/member_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dip"
+        android:paddingRight="20dip"
+        android:layout_marginTop="20dip"
+        android:layout_alignParentBottom="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/invice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/multi_voice_btn_bg"
+                android:onClick="onItemClick"
+                android:padding="15dip"
+                android:src="@drawable/invite_member_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/multi_voice_invive" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+            android:layout_toLeftOf="@+id/vedio"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/voice_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/multi_voice_btn_bg"
+                android:onClick="onItemClick"
+                android:padding="15dip"
+                android:src="@drawable/voice_chat_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/multi_voice_voice_chat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@id/vedio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/vedio_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/multi_voice_btn_bg"
+                android:onClick="onItemClick"
+                android:padding="15dip"
+                android:src="@drawable/vedio_chat_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/multi_voice_vedio_chat" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/handfree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/vedio"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/handfree_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onItemClick"
+                android:padding="5dip"
+                android:src="@drawable/handfree_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/multi_voice_handfree" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/over"
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:layout_below="@id/vedio"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10dip"
+            android:layout_marginTop="20dip"
+            android:background="@mipmap/over" />
+
+        <LinearLayout
+            android:id="@+id/silent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/vedio"
+            android:layout_marginTop="10dip"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/silent_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onItemClick"
+                android:padding="5dip"
+                android:src="@drawable/siltent_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dip"
+                android:text="@string/multi_voice_silence" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

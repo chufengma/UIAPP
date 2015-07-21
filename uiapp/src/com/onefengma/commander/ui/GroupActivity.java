@@ -82,7 +82,7 @@ public class GroupActivity extends BaseActivity implements SearchView.OnQueryTex
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_create) {
-            CreateGroupActivity.startFrom(this);
+            SelectGroupMemberActivity.startFrom(this);
             return true;
         }
         return super.onOptionsItemSelected(item);

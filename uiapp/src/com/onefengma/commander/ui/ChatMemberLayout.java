@@ -13,7 +13,10 @@ import com.onefengma.commander.utils.ViewUtils;
 import java.util.List;
 
 public class ChatMemberLayout extends LinearLayout implements View.OnClickListener{
-
+	
+	private int ONE_ROW_COUNT = 4;
+	private boolean NEED_ADD = true;
+	
     private LayoutParams memberLayoutParams;
     private OnMemberClickListener onMemberClickListener;
 
@@ -30,7 +33,15 @@ public class ChatMemberLayout extends LinearLayout implements View.OnClickListen
         super(context, attrs);
         init();
     }
-
+    
+    public void setOneRowCount(int count) {
+    	ONE_ROW_COUNT = count;
+    }
+    
+    public void isNeedAdd(boolean needAdd) {
+    	NEED_ADD = needAdd;
+    }
+    
     private void init() {
         setOrientation(VERTICAL);
     }
@@ -38,28 +49,29 @@ public class ChatMemberLayout extends LinearLayout implements View.OnClickListen
     public void addMembers(List<Member> members) {
         LinearLayout rowLayout = null;
         for (int i = 0; i < members.size(); i++) {
-            if (i % 4 == 0) {
+            if (i % ONE_ROW_COUNT == 0) {
                 rowLayout = createRowLayout();
                 addView(rowLayout);
             }
             rowLayout.addView(createMemberView(members.get(i)));
         }
-        int restCount = 4 - rowLayout.getChildCount();
+        int restCount = ONE_ROW_COUNT - rowLayout.getChildCount();
         if (restCount == 0) {
             rowLayout = createRowLayout();
-            rowLayout.addView(createAddView());
-            restCount = 3;
             addView(rowLayout);
         }
-
+        
+        if (NEED_ADD) {
+        	rowLayout.addView(createAddView());
+            restCount = ONE_ROW_COUNT - 1;
+        }
+        
         for (int i = 0; i < restCount; i++) {
             View view = new View(getContext());
             view.setLayoutParams(getMemberLayoutParams());
             view.setVisibility(View.INVISIBLE);
             rowLayout.addView(view);
         }
-
-
     }
 
     private LinearLayout createRowLayout() {

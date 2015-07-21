@@ -42,8 +42,8 @@
                 android:value="com.onefengma.commander.ui.BaseActivity" />
         </activity>
         <activity
-            android:name=".ui.CreateGroupActivity"
-            android:label="@string/title_activity_create_group"
+            android:name=".ui.SelectGroupMemberActivity"
+            android:label="@string/title_activity_select_member"
             android:parentActivityName=".ui.BaseActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -58,8 +58,12 @@
             android:label="@string/title_activity_member_profile" >
         </activity>
         <activity
-            android:name=".ui.ChangeGroupNameActivity"
+            android:name=".ui.SetGroupNameActivity"
             android:label="@string/title_activity_change_group_name" >
+        </activity>
+        <activity
+            android:name=".MultiVoiceActivity"
+            android:label="@string/title_activity_multi_voice" >
         </activity>
     </application>
 
