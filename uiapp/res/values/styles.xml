@@ -1,0 +1,57 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="colorPrimary">@color/main_bg</item>
+        <item name="actionMenuTextAppearance">@style/MenuTextStyle</item>
+    </style>
+
+    <style name="ActionBarStyle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid">
+        <item name="android:background">@color/main_bg</item>
+        <item name="background">@color/main_bg</item>
+        <item name="android:actionMenuTextColor">@android:color/white</item>
+    </style>
+
+    <style name="MenuTextStyle" parent="@style/TextAppearance.AppCompat.Widget.ActionBar.Menu">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dip</item>
+        <item name="android:background">@color/divider</item>
+    </style>
+
+    <style name="MainButtonStyle" parent="@style/Widget.AppCompat.Button">
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">25sp</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="ListViewTitle" parent="@android:style/Widget.TextView">
+        <item name="android:background">#cccccc</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingLeft">20dip</item>
+        <item name="android:paddingTop">3dip</item>
+        <item name="android:paddingBottom">3dip</item>
+        <item name="android:paddingRight">20dip</item>
+    </style>
+
+    <style name="ChatSettingItemStyle">
+        <item name="android:textSize">16dip</item>
+        <item name="android:paddingLeft">10dip</item>
+        <item name="android:paddingTop">16dip</item>
+        <item name="android:paddingBottom">16dip</item>
+        <item name="android:paddingRight">10dip</item>
+    </style>
+
+    <style name="SettingButtonStyle">
+        <item name="android:layout_marginLeft">15dip</item>
+        <item name="android:layout_marginRight">15dip</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>
