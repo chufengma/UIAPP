@@ -1,6 +1,7 @@
 package com.onefengma.commander.ui;
 
 import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.widget.SearchView;
@@ -97,11 +98,19 @@ public class SelectGroupMemberActivity extends BaseActivity implements MemberLis
             getIntent().putExtra(EXTRA_MEMBERS, memberListAdapter.getCheckedMembers().toArray(members));
             if (type == TYPE_CREATE_GROUP) {
                 // TODO 创建群聊
-                Toast.makeText(this, "正在创建群聊" + memberListAdapter.getCheckedMembers().size(), Toast.LENGTH_SHORT).show();
-                setResult(RESULT_OK, getIntent());
+                DialogManager.getAskJoinGroupDialog(this, "廖凡", "南京海关指挥组", new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int which) {
+						if (which == DialogInterface.BUTTON_POSITIVE) {
+							DialogManager.getJoindGroupDialog(SelectGroupMemberActivity.this, "南京海关指挥组", null).show();
+						} else if (which == DialogInterface.BUTTON_NEGATIVE) {
+			                ContextToast.show(SelectGroupMemberActivity.this, "您已拒绝加入南京海关指挥组", Toast.LENGTH_SHORT);
+						}
+					}
+				}).show();
             } if (type == TYPE_ADD_MEMBER) {
                 // TODO 添加成员
-                Toast.makeText(this, "添加成员", Toast.LENGTH_SHORT).show();
                 setResult(RESULT_OK, getIntent());
             }
             return true;

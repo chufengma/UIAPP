@@ -30,12 +30,26 @@
     <string name="title_activity_create_group">创建群聊</string>
     <string name="action_save">保存</string>
     <string name="dialog_item">取消</string>
-    <string name="title_activity_multi_voice">MultiVoiceActivity</string>
     
     <string name="multi_voice_invive">邀请新成员</string>
     <string name="multi_voice_voice_chat">语音对讲</string>
     <string name="multi_voice_vedio_chat">视频对讲</string>
     <string name="multi_voice_handfree">免提</string>
     <string name="multi_voice_silence">静音</string>
+	
+	<!-- Dialog 相关 -->
+    <string name="btn_cancle">取消</string>
+
+    <string name="hint">提示</string>
+    <string name="joint_group">%1$s邀请您加入%2$s，请选择是否加入？</string>
+    <string name="btn_join">加入</string>
+    <string name="btn_refuse">拒绝</string>
+    
+    <string name="joined_group">您已加入加入%1$s</string>
+    <string name="btn_view_later">稍后查看</string>
+    <string name="btn_view_now">立即进入</string>
+
+    <string name="remove_all_message">确定删除指挥组的消息记录吗？</string>
+    <string name="btn_empty">清空消息记录</string>
 
 </resources>

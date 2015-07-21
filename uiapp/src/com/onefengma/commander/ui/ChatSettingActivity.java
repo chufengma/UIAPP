@@ -68,6 +68,9 @@ public class ChatSettingActivity extends BaseActivity implements ChatMemberLayou
             case R.id.set_group_name:
                 SetGroupNameActivity.startForSetGroupName(this, group);
                 break;
+            case R.id.delete_message:
+                DialogManager.getEmptyMessageDialog(this, null).show();
+            	break;
         }
     }
 }

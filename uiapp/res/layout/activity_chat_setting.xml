@@ -142,6 +142,7 @@
             android:background="@drawable/setting_bg_selector"
             android:clickable="true"
             android:text="清空消息记录"
+            android:onClick="onClick"
             android:textColor="@color/black" />
 
         <Button

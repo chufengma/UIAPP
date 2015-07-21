@@ -62,8 +62,7 @@
             android:label="@string/title_activity_change_group_name" >
         </activity>
         <activity
-            android:name=".MultiVoiceActivity"
-            android:label="@string/title_activity_multi_voice" >
+            android:name=".MultiVoiceActivity">
         </activity>
     </application>
 

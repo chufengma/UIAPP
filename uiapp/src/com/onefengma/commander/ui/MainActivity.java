@@ -2,6 +2,7 @@ package com.onefengma.commander.ui;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import com.onefengma.commander.R;
 
@@ -16,6 +17,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initViews();
+        
     }
 
     private void initViews() {
